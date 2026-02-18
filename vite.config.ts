@@ -13,6 +13,9 @@ export default defineConfig(({ command }) => {
         react(),
         cssInjectedByJsPlugin() // add this
       ],
+      define: {
+        'process.env.NODE_ENV': '"production"' // add this
+      },
       build: {
         lib: {
           entry: 'src/main.tsx',
